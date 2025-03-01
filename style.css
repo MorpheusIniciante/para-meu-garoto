@@ -16,15 +16,15 @@ h1 {
     font-size: 2.5em;
     color: #000; /* Título em preto para garantir que seja visível */
     margin-top: 20px;
-    opacity: 0;
-    animation: slideUp 2s ease-out forwards; /* Animação suave no título */
+    opacity: 0; /* Começa invisível */
+    animation: slideUp 2s ease-out forwards; /* Aplica animação de deslizamento */
 }
 
 /* Animação suave do título */
 @keyframes slideUp {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Começa abaixo */
+        transform: translateY(20px); /* Inicia um pouco abaixo */
     }
     100% {
         opacity: 1;
@@ -32,17 +32,17 @@ h1 {
     }
 }
 
-/* Estilo do parágrafo */
+/* Estilo do parágrafo com animação de fade-in */
 p {
     font-size: 1.2em;
-    color: #000; /* Texto em preto para garantir que o texto fique visível */
+    color: #000; /* Texto em preto */
     margin-top: 10px;
     font-weight: 400;
-    opacity: 0;
-    animation: fadeIn 2s ease-out forwards 0.5s; /* Efeito de fade-in no parágrafo */
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 2s ease-out forwards 1s; /* Efeito de fade-in com delay */
 }
 
-/* Animação suave do parágrafo */
+/* Animação de fade-in para o parágrafo */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -58,19 +58,19 @@ p {
     justify-content: center; /* Centraliza as imagens horizontalmente */
     gap: 20px; /* Espaço entre as imagens */
     margin-top: 20px;
-    opacity: 0;
-    animation: fadeInGallery 2s ease-out forwards 1s; /* Animação das imagens */
+    opacity: 0; /* Começa invisível */
+    animation: fadeInGallery 2s ease-out forwards 1.5s; /* Aparece com animação após o título e parágrafo */
 }
 
 /* Efeito de animação das imagens */
 @keyframes fadeInGallery {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* As imagens começam abaixo */
+        transform: translateY(20px); /* Começa um pouco abaixo */
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Imagens vão para a posição original */
+        transform: translateY(0); /* Vai para a posição original */
     }
 }
 
@@ -97,7 +97,7 @@ p {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* sobe um pouco */
+        transform: translateY(-10px); /* Sobe um pouco */
     }
     100% {
         transform: translateY(0);
