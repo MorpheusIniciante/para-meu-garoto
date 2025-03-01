@@ -13,7 +13,7 @@ body {
 
 /* Estilo do título com animação */
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #000; /* Título em preto para garantir que seja visível */
     margin-top: 20px;
     animation: slideUp 2s ease-out; /* Animação suave no título */
@@ -76,7 +76,7 @@ audio {
 /* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 1.8em; /* Reduz o tamanho do título em telas pequenas */
+        font-size: 2em; /* Reduz o tamanho do título em telas pequenas */
     }
 
     p {
