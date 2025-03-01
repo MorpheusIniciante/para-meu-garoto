@@ -39,6 +39,20 @@ p {
     font-weight: 400;
 }
 
+/* Estilo da galeria de fotos (lado a lado) */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 20px;
+}
+
+/* Estilo das imagens da galeria */
+.galeria img {
+    width: 200px; /* Tamanho das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
 /* Estilo da flor (buquê) centralizado embaixo */
 #buque {
     animation: float 3s ease-in-out infinite;
@@ -83,7 +97,7 @@ audio {
         font-size: 1.1em; /* Ajuste o tamanho do texto em telas menores */
     }
 
-    /* Flor centralizada no celular */
+    /* Ajusta o tamanho da flor no celular */
     #buque {
         width: 120px; /* Reduz o tamanho da flor no celular */
         bottom: 12vh; /* Ajusta a flor para um pouco mais para baixo */
@@ -92,5 +106,14 @@ audio {
     /* Ajusta o áudio para telas pequenas */
     audio {
         max-width: 90%; /* Faz o player de áudio caber melhor em telas pequenas */
+    }
+
+    /* Ajuste das imagens da galeria no celular */
+    .galeria {
+        flex-direction: column; /* Coloca as imagens uma embaixo da outra em telas pequenas */
+    }
+
+    .galeria img {
+        width: 80%; /* Ajusta o tamanho das imagens na tela pequena */
     }
 }
