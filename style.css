@@ -43,15 +43,15 @@ p {
 .galeria {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as imagens */
     margin-top: 20px;
+    flex-wrap: wrap; /* Permite que as imagens se movam em telas pequenas */
 }
 
 .galeria img {
-    width: 250px; /* ajuste o tamanho conforme necessário */
-    margin: 15px;
+    width: 250px; /* Ajuste o tamanho conforme necessário */
     border-radius: 15px;
-    animation: bounce 1.5s infinite; /* animação contínua de pulo */
+    animation: bounce 1.5s infinite; /* Animação contínua de pulo */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -65,14 +65,17 @@ p {
     }
 }
 
-/* Estilos das imagens de buquê de flores (flutuação) */
-#buque-esquerdo, #buque-direito {
+/* Estilo da flor (buquê) centralizado embaixo */
+#buque {
     animation: float 3s ease-in-out infinite;
-    position: absolute; /* Ficam fixas no lugar */
-    width: 150px; /* Tamanho dos buquês */
+    position: absolute;
+    width: 150px; /* Tamanho do buquê */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige a centralização */
+    bottom: 10vh; /* Coloca a flor um pouco acima da parte inferior */
 }
 
-/* Efeito de flutuação das imagens dos buquês */
+/* Efeito de flutuação da flor */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -83,17 +86,6 @@ p {
     100% {
         transform: translateY(0);
     }
-}
-
-/* Estilo para as imagens de buquê de flores */
-#buque-esquerdo {
-    left: 10%; /* Fica à esquerda */
-    bottom: 10vh; /* Colocando o buquê mais para baixo - 10% da altura da tela */
-}
-
-#buque-direito {
-    right: 10%; /* Fica à direita */
-    bottom: 10vh; /* Colocando o buquê mais para baixo - 10% da altura da tela */
 }
 
 /* Estilos do áudio (centralização) */
@@ -109,22 +101,27 @@ audio {
 
 /* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    p {
+        font-size: 1.1em; /* Ajuste o tamanho do texto em telas menores */
+    }
+
+    /* Ajusta o layout das imagens na galeria para telas pequenas */
     .galeria img {
         width: 200px; /* Reduz o tamanho das imagens em telas menores */
     }
 
-    #buque-esquerdo, #buque-direito {
-        width: 120px; /* Reduz o tamanho dos buquês em telas menores */
-        bottom: 12vh; /* Ajusta o posicionamento mais para baixo em telas pequenas */
+    /* Flor centralizada no celular */
+    #buque {
+        width: 120px; /* Reduz o tamanho da flor no celular */
+        bottom: 12vh; /* Ajusta a flor para um pouco mais para baixo */
     }
 
-    /* Ajustando o áudio para telas pequenas */
+    /* Ajusta o áudio para telas pequenas */
     audio {
         max-width: 90%; /* Faz o player de áudio caber melhor em telas pequenas */
-    }
-
-    /* Ajustando o título para telas menores */
-    h1 {
-        font-size: 1.5em; /* Ajusta o tamanho do título */
     }
 }
