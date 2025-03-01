@@ -17,7 +17,7 @@ h1 {
     color: #000; /* Título em preto para garantir que seja visível */
     margin-top: 20px;
     opacity: 0; /* Começa invisível */
-    animation: slideUp 2s ease-out forwards; /* Aplica animação de deslizamento */
+    animation: slideUp 2s ease-out forwards; /* Animação de deslizamento suave */
 }
 
 /* Animação suave do título */
@@ -39,7 +39,7 @@ p {
     margin-top: 10px;
     font-weight: 400;
     opacity: 0; /* Começa invisível */
-    animation: fadeIn 2s ease-out forwards 1s; /* Efeito de fade-in com delay */
+    animation: fadeIn 2s ease-out forwards 1s; /* Fade-in com atraso */
 }
 
 /* Animação de fade-in para o parágrafo */
@@ -59,14 +59,14 @@ p {
     gap: 20px; /* Espaço entre as imagens */
     margin-top: 20px;
     opacity: 0; /* Começa invisível */
-    animation: fadeInGallery 2s ease-out forwards 1.5s; /* Aparece com animação após o título e parágrafo */
+    animation: fadeInGallery 2s ease-out forwards 1.5s; /* Animação das imagens */
 }
 
-/* Efeito de animação das imagens */
+/* Animação das imagens da galeria */
 @keyframes fadeInGallery {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Começa um pouco abaixo */
+        transform: translateY(20px); /* Começa abaixo */
     }
     100% {
         opacity: 1;
@@ -76,19 +76,19 @@ p {
 
 /* Estilo das imagens da galeria */
 .galeria img {
-    width: 45%; /* As imagens ficam com 45% da largura, lado a lado */
-    height: auto; /* Mantém a proporção das imagens */
-    max-width: 500px; /* Limita a largura máxima das imagens */
+    width: 45%; /* Imagens lado a lado */
+    height: auto;
+    max-width: 500px;
 }
 
 /* Estilo da flor (buquê) centralizado embaixo */
 #buque {
     animation: float 3s ease-in-out infinite;
     position: absolute;
-    width: 150px; /* Tamanho do buquê */
+    width: 150px; /* Tamanho da flor */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Corrige a centralização */
-    bottom: 10vh; /* Coloca a flor um pouco acima da parte inferior */
+    bottom: 10vh; /* Ajusta a posição para um pouco acima da parte inferior */
 }
 
 /* Efeito de flutuação da flor */
@@ -131,17 +131,4 @@ audio {
         bottom: 12vh; /* Ajusta a flor para um pouco mais para baixo */
     }
 
-    /* Ajusta o áudio para telas pequenas */
-    audio {
-        max-width: 90%; /* Faz o player de áudio caber melhor em telas pequenas */
-    }
-
-    /* Ajuste das imagens da galeria no celular */
-    .galeria {
-        flex-direction: column; /* Coloca as imagens uma embaixo da outra em telas pequenas */
-    }
-
-    .galeria img {
-        width: 80%; /* Ajusta o tamanho das imagens na tela pequena */
-    }
-}
+    /* Ajusta o áudio para 
