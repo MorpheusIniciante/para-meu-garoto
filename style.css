@@ -1,0 +1,88 @@
+/* Estilos gerais */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('lua.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir a tela */
+    background-position: center;
+    background-attachment: fixed; /* A imagem permanece fixa enquanto rola */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-y: scroll; /* Ativa o rolamento da página */
+    height: 100%;
+}
+
+/* Estilo do título com animação */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px;
+    animation: aparecer 3s ease-in-out infinite; /* Animação */
+}
+
+/* Animação para o título */
+@keyframes aparecer {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Estilo do texto */
+p {
+    font-size: 1.2em;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 20px;
+    max-width: 500px;
+}
+
+/* Estilo das imagens */
+.galeria img {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo dos gifs */
+#buque-esquerdo, #buque-direito {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px; /* Aumentei o tamanho dos gifs */
+    height: auto;
+    z-index: 1; /* Coloca os gifs acima do conteúdo */
+}
+
+#buque-esquerdo {
+    left: 10px; /* Gif no lado esquerdo */
+}
+
+#buque-direito {
+    right: 10px; /* Gif no lado direito */
+}
+
+/* Centraliza o áudio abaixo das imagens */
+.audio-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+audio {
+    width: 80%; /* Faz o áudio ocupar 80% da largura da tela */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block;
+}
