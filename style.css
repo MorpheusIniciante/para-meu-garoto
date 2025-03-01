@@ -11,24 +11,11 @@ body {
     overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-/* Estilo do título com animação */
+/* Estilo do título */
 h1 {
     font-size: 2.5em;
     color: #000; /* Título em preto para garantir que seja visível */
     margin-top: 20px;
-    animation: slideUp 2s ease-out; /* Animação suave no título */
-}
-
-/* Animação suave do título */
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Começa abaixo */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Vai para a posição original */
-    }
 }
 
 /* Estilo do parágrafo */
@@ -39,20 +26,19 @@ p {
     font-weight: 400;
 }
 
-/* Estilo da galeria de fotos (lado a lado) */
+/* Estilo da galeria de fotos */
 .galeria {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espaçamento entre as imagens */
+    display: flex; 
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Espaço entre as imagens */
     margin-top: 20px;
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
 }
 
 /* Estilo das imagens da galeria */
 .galeria img {
-    width: 45%; /* Ajusta o tamanho das imagens */
+    width: 45%; /* As imagens ficam com 45% da largura, lado a lado */
     height: auto; /* Mantém a proporção das imagens */
-    max-width: 600px; /* Limita o tamanho máximo das imagens */
+    max-width: 500px; /* Limita a largura máxima das imagens */
 }
 
 /* Estilo da flor (buquê) centralizado embaixo */
