@@ -1,134 +1,83 @@
-/* Estilos gerais */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@700&display=swap');
+
 body {
-    font-family: 'Pacifico', sans-serif;
+    background-color: #fff;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pela sua imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center center; /* Centraliza a imagem */
-    background-attachment: fixed; /* A imagem de fundo fica fixa durante a rolagem */
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-/* Estilo do título com animação */
-h1 {
-    font-size: 2.5em;
-    color: #000; /* Título em preto para garantir que seja visível */
-    margin-top: 20px;
-    opacity: 0; /* Começa invisível */
-    animation: slideUp 2s ease-out forwards; /* Animação de deslizamento suave */
+.container {
+    padding: 20px;
 }
 
-/* Animação suave do título */
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Inicia um pouco abaixo */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Vai para a posição original */
-    }
+/* Efeito de movimento suave no título */
+.animate-title {
+    font-size: 24px;
+    background: black;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: floatText 3s ease-in-out infinite alternate;
 }
 
-/* Estilo do parágrafo com animação de fade-in */
-p {
-    font-size: 1.2em;
-    color: #000; /* Texto em preto */
+/* Animação do título */
+@keyframes floatText {
+    from { transform: translateY(0px); }
+    to { transform: translateY(5px); }
+}
+
+.mensagem {
+    font-size: 18px;
     margin-top: 10px;
-    font-weight: 400;
-    opacity: 0; /* Começa invisível */
-    animation: fadeIn 2s ease-out forwards 1s; /* Fade-in com atraso */
 }
 
-/* Animação de fade-in para o parágrafo */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Estilo da galeria de fotos */
-.galeria {
-    display: flex; 
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    gap: 20px; /* Espaço entre as imagens */
-    margin-top: 20px;
-    opacity: 0; /* Começa invisível */
-    animation: fadeInGallery 2s ease-out forwards 1.5s; /* Animação das imagens */
-}
-
-/* Animação das imagens da galeria */
-@keyframes fadeInGallery {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Começa abaixo */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Vai para a posição original */
-    }
-}
-
-/* Estilo das imagens da galeria */
-.galeria img {
-    width: 45%; /* Imagens lado a lado */
+/* Efeito suave de movimento nas fotos */
+.fotos img {
+    width: 200px;
     height: auto;
-    max-width: 500px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Estilo da flor (buquê) centralizado embaixo */
-#buque {
-    animation: float 3s ease-in-out infinite;
-    position: absolute;
-    width: 150px; /* Tamanho da flor */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Corrige a centralização */
-    bottom: 10vh; /* Ajusta a posição para um pouco acima da parte inferior */
-}
-
-/* Efeito de flutuação da flor */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Sobe um pouco */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Estilos do áudio (centralização) */
-.audio-container {
-    margin-top: 30px;
+/* Efeito ao passar o mouse nas fotos */
+.fotos img:hover {
+    transform: scale(1.05);
 }
 
 audio {
-    width: 100%;
-    max-width: 300px; /* Limita a largura do player de áudio */
-    margin: 0 auto;
+    margin-top: 20px;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-/* Responsividade para telas menores */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2em; /* Reduz o tamanho do título em telas pequenas */
-    }
+.letra-musica {
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
 
-    p {
-        font-size: 1.1em; /* Ajuste o tamanho do texto em telas menores */
-    }
+/* Estilização dos GIFs */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
-    /* Ajusta o tamanho da flor no celular */
-    #buque {
-        width: 120px; /* Reduz o tamanho da flor no celular */
-        bottom: 12vh; /* Ajusta a flor para um pouco mais para baixo */
-    }
+.gif-container img {
+    width: 120px; /* Ajuste o tamanho conforme necessário */
+}
 
-    /* Ajusta o áudio para 
+footer {
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
