@@ -14,7 +14,7 @@ body {
 /* Estilo do título com animação */
 h1 {
     font-size: 2em;
-    color: #fff; /* Título em branco para contrastar com o fundo */
+    color: #000; /* Título em preto para garantir que seja visível */
     margin-top: 20px;
     animation: slideUp 2s ease-out; /* Animação suave no título */
 }
@@ -34,35 +34,9 @@ h1 {
 /* Estilo do parágrafo */
 p {
     font-size: 1.2em;
-    color: #fff; /* Texto em branco */
+    color: #000; /* Texto em preto */
     margin-top: 10px;
     font-weight: 400;
-}
-
-/* Estilos iniciais das imagens da galeria */
-.galeria {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaço entre as imagens */
-    margin-top: 20px;
-    flex-wrap: wrap; /* Permite que as imagens se movam em telas pequenas */
-}
-
-.galeria img {
-    width: 250px; /* Ajuste o tamanho conforme necessário */
-    border-radius: 15px;
-    animation: bounce 1.5s infinite; /* Animação contínua de pulo */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Efeito de pulo (bounce) nas imagens da galeria */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* posição original */
-    }
-    50% {
-        transform: translateY(-10px); /* sobe um pouco */
-    }
 }
 
 /* Estilo da flor (buquê) centralizado embaixo */
@@ -107,11 +81,6 @@ audio {
 
     p {
         font-size: 1.1em; /* Ajuste o tamanho do texto em telas menores */
-    }
-
-    /* Ajusta o layout das imagens na galeria para telas pequenas */
-    .galeria img {
-        width: 200px; /* Reduz o tamanho das imagens em telas menores */
     }
 
     /* Flor centralizada no celular */
