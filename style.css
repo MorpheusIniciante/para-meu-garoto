@@ -2,7 +2,7 @@
 body {
     font-family: 'Pacifico', sans-serif;
     text-align: center;
-    background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pela sua imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a tela */
     background-position: center center; /* Centraliza a imagem */
     background-attachment: fixed; /* A imagem de fundo fica fixa durante a rolagem */
