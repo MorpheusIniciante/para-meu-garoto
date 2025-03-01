@@ -2,22 +2,39 @@
 body {
     font-family: 'Pacifico', sans-serif;
     text-align: center;
-    background-color: #f9f9f9;
+    background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* A imagem de fundo fica fixa durante a rolagem */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-/* Estilo do título */
+/* Estilo do título com animação */
 h1 {
     font-size: 2em;
-    color: #333;
+    color: #fff; /* Título em branco para contrastar com o fundo */
     margin-top: 20px;
+    animation: fadeIn 2s ease-out; /* Animação suave no título */
+}
+
+/* Animação do título */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Estilo do parágrafo */
 p {
     font-size: 1.2em;
-    color: #555;
+    color: #fff; /* Texto em branco */
     margin-top: 10px;
     font-weight: 400;
 }
@@ -48,10 +65,10 @@ p {
     }
 }
 
-/* Estilo das imagens de buquê de flores */
+/* Estilos das imagens de buquê de flores (flutuação) */
 #buque-esquerdo, #buque-direito {
     animation: float 3s ease-in-out infinite;
-    position: absolute; /* Para que fiquem fixos no lugar */
+    position: absolute; /* Ficam fixas no lugar */
     width: 150px; /* Tamanho dos buquês */
 }
 
@@ -66,6 +83,17 @@ p {
     100% {
         transform: translateY(0);
     }
+}
+
+/* Estilo para as imagens de buquê de flores */
+#buque-esquerdo {
+    left: 10%; /* Fica à esquerda */
+    bottom: 10%; /* Fica um pouco acima da parte inferior */
+}
+
+#buque-direito {
+    right: 10%; /* Fica à direita */
+    bottom: 10%; /* Fica um pouco acima da parte inferior */
 }
 
 /* Estilos do áudio (centralização) */
@@ -87,5 +115,16 @@ audio {
 
     #buque-esquerdo, #buque-direito {
         width: 120px; /* Reduz o tamanho dos buquês em telas menores */
+        bottom: 5%; /* Ajusta o posicionamento */
+    }
+
+    /* Ajustando o áudio para telas pequenas */
+    audio {
+        max-width: 90%; /* Faz o player de áudio caber melhor em telas pequenas */
+    }
+
+    /* Ajustando o título para telas menores */
+    h1 {
+        font-size: 1.5em; /* Ajusta o tamanho do título */
     }
 }
