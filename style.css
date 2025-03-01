@@ -1,9 +1,41 @@
+/* Estilos gerais */
+body {
+    font-family: 'Pacifico', sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilo do parágrafo */
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
 /* Estilos iniciais das imagens da galeria */
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 .galeria img {
-    width: 200px; /* ajuste o tamanho conforme necessário */
-    margin: 10px;
+    width: 250px; /* ajuste o tamanho conforme necessário */
+    margin: 15px;
     border-radius: 15px;
     animation: bounce 1.5s infinite; /* animação contínua de pulo */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Efeito de pulo (bounce) nas imagens da galeria */
@@ -16,10 +48,11 @@
     }
 }
 
-/* Estilos das imagens de buquê de flores (flutuação) */
+/* Estilo das imagens de buquê de flores */
 #buque-esquerdo, #buque-direito {
     animation: float 3s ease-in-out infinite;
     position: absolute; /* Para que fiquem fixos no lugar */
+    width: 150px; /* Tamanho dos buquês */
 }
 
 /* Efeito de flutuação das imagens dos buquês */
@@ -32,5 +65,27 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+/* Estilos do áudio (centralização) */
+.audio-container {
+    margin-top: 30px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px; /* Limita a largura do player de áudio */
+    margin: 0 auto;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .galeria img {
+        width: 200px; /* Reduz o tamanho das imagens em telas menores */
+    }
+
+    #buque-esquerdo, #buque-direito {
+        width: 120px; /* Reduz o tamanho dos buquês em telas menores */
     }
 }
