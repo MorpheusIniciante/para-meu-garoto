@@ -34,7 +34,7 @@ h1 {
 /* Estilo do parágrafo */
 p {
     font-size: 1.2em;
-    color: #000; /* Texto em preto */
+    color: #000; /* Texto em preto para garantir que o texto fique visível */
     margin-top: 10px;
     font-weight: 400;
 }
