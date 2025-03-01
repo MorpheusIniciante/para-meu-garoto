@@ -88,12 +88,12 @@ p {
 /* Estilo para as imagens de buquê de flores */
 #buque-esquerdo {
     left: 10%; /* Fica à esquerda */
-    bottom: 5%; /* Colocando o buquê mais para baixo */
+    bottom: 10vh; /* Colocando o buquê mais para baixo - 10% da altura da tela */
 }
 
 #buque-direito {
     right: 10%; /* Fica à direita */
-    bottom: 5%; /* Colocando o buquê mais para baixo */
+    bottom: 10vh; /* Colocando o buquê mais para baixo - 10% da altura da tela */
 }
 
 /* Estilos do áudio (centralização) */
@@ -115,7 +115,7 @@ audio {
 
     #buque-esquerdo, #buque-direito {
         width: 120px; /* Reduz o tamanho dos buquês em telas menores */
-        bottom: 10%; /* Ajusta o posicionamento */
+        bottom: 12vh; /* Ajusta o posicionamento mais para baixo em telas pequenas */
     }
 
     /* Ajustando o áudio para telas pequenas */
