@@ -43,14 +43,16 @@ p {
 .galeria {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre as imagens */
+    gap: 10px; /* Espaçamento entre as imagens */
     margin-top: 20px;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
 }
 
 /* Estilo das imagens da galeria */
 .galeria img {
-    width: 200px; /* Tamanho das imagens */
+    width: 45%; /* Ajusta o tamanho das imagens */
     height: auto; /* Mantém a proporção das imagens */
+    max-width: 600px; /* Limita o tamanho máximo das imagens */
 }
 
 /* Estilo da flor (buquê) centralizado embaixo */
